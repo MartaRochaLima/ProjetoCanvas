@@ -19,8 +19,7 @@
 	// INSERINDO DADOS NO BANCO DE DADOS
 	$pdo->query("INSERT INTO `contato`(email) VALUES ('$email')"); 
 
-	
-		
+	echo(" Inscricao realizada com sucesso!");
 	// mysqli_close();
 	
 ?> 
@@ -67,7 +66,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form action="index.php" method= "POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <form onsubmit="funcaoEmailSalvo()" action="index.php" method= "POST" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                               <div class="form-group">
 
                                 <label for="exampleInputEmail1" class="subscribe"> Inscreva-se</label>
@@ -153,12 +152,12 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form action="index.php" method= "POST" class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
+                        <form onsubmit ="funcaoEmailSalvo()" action="index.php" method= "POST" class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
                         <div class="form-group">
 
                          <label for="exampleInputEmail1" class="subscribe"> Inscreva-se</label>
                          <input  type="email" class="form-control" id="exampleInputEmail1"name="email" placeholder="Digite seu email">
-                         <button id="btn-layout"class="btn btn-primary" type="submit" name="btn"> Enviar </button>
+                         <button  id="btn-layout"class="btn btn-primary" type="submit" name="btn"> Enviar </button>
 
 
                         </div>
@@ -189,12 +188,10 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="responsivo.js"></script>
     </body>
 </html>
